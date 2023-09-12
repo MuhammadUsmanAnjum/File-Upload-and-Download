@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="conatiner">
+    <div class="row">
+        <div class="col-sm-4">Title</div>
+        <div class="col-sm-4">Description</div>
+        <div class="col-sm-4">File</div>
+        {% for file in files %}
+        <div class="col-sm-4">{{file.title}}</div>
+        <div class="col-sm-4">{{file.description}}</div>
+        
+        <div class="col-sm-4"><a href="{% url 'download_file' file.pk %}">Download File</a>{{file.file}}</div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
