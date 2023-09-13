@@ -1,3 +1,4 @@
 *.pyc
 CrymzeeEvaluation/files
 *.sqlite3
+media/files

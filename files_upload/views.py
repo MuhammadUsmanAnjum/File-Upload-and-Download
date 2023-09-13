@@ -12,7 +12,7 @@ def upload_file(request):
         form = FileUploadForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect("/file_upload/")
+            return HttpResponseRedirect("/dashboard/")
         
     
     form = FileUploadForm()
